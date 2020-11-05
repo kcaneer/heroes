@@ -47,7 +47,7 @@ $conn->close();
             </div>
             <textarea name="userInput" type="text" class="form-control my-auto mt-2 mb-2" aria-label="With textarea"></textarea>
         </div>
-        <div class="col col-6 mx-auto">
+        <div class="col col-6 mx-auto text-center">
             <button type="submit" class="btn btn-success mt-2 mb-2">Add Friend</button>
             <button type="submit" formaction="enemy.php" class="btn btn-danger mt-2 mb-2">Add Enemy</button>
         </div>

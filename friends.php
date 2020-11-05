@@ -6,9 +6,6 @@ $database = "sqlheroes";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
-//select current list of heroes
-$sql = 'SELECT * FROM heroes';
-$result = $conn->query($sql);
 
 //get userinput to add friend
 $newFriend = $_POST['userInput'];
@@ -19,10 +16,11 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
 $conn->close();
 
 if ($sql != null) {
-    header("Location: localhost:8888/");
+    header("Location: index.php");
     exit;
 }
 
