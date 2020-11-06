@@ -19,14 +19,14 @@ $friends = "";
 if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        $friends .= "<li> " . " -<strong>" . $row["name"] . "</strong><br> " . $row["about_me"] . "<div class='mr-auto'><button type='submit' formaction='friends.php' class='btn btn-danger'>Remove Friend</button></div></li>";
+        $friends .= "<li> " . " -<strong>" . $row["name"] . "</strong><br> " . $row["about_me"] . "<form class='mr-auto' method='GET' action='removeFriend.php'><button type='submit' name='remove' class='btn btn-danger'>Remove Friend</button></form></li>";
     }
 }
 
 if ($result2->num_rows > 0) {
     // output data of each row
     while ($row = $result2->fetch_assoc()) {
-        $enemies .= "<li>-<strong>" . $row["name"] . "</strong><div class='mr-auto'><button type='submit' formaction='enemy.php' class='btn btn-success'>Remove Enemy</button></div></li>";
+        $enemies .= "<li>" . "-<strong>" . $row["name"] . "</strong><br><form class='mr-auto' method='GET' action='removeEnemy.php'><button type='submit' name='remove' class='btn btn-success'>Remove Enemy</button></form></li>";
     }
 }
 $conn->close();
