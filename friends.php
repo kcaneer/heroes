@@ -20,6 +20,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 if ($sql != null) {
+    header('Location: ./friends.php');
     header("Location: index.php");
     exit;
 }
