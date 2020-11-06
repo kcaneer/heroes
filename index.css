@@ -1,3 +1,7 @@
 .jumbotron {
     background-image: linear-gradient(to right, green , red);
 }
+
+.card {
+    border: 0 !important;
+}
